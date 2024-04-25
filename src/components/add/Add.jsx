@@ -6,6 +6,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { addVIdeoAPI } from '../../services/allAPI';
 
 
 
@@ -16,11 +17,27 @@ function Add() {
 })
 const [invalidURl,setinvaliURL] = useState(false)
 
-const handleUpload =()=>{
+const handleUpload = async ()=>{
 console.log("inside handle upload function");
 const {caption,imgURL,youtubeURL} = videoDetails;
 if(caption&&imgURL&&youtubeURL){
   console.log("api call");
+
+  try {
+   const result = await addVIdeoAPI(videoDetails)
+   console.log(result);
+    if( result.status >=200 && result.status<300){
+      console.log(result.data);
+      toast.success( `${result.data.caption} is succesfully uploaded`)
+      handleClose()
+    }else{
+      toast.error(`${result.response.data}`)
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
+
 
 }else{
   toast.warn("please fill the form completely")
