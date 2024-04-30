@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
+import {getHistoryAPI} from '../services/allAPI'
 
 function History() {
+const [videoHistory,setVideoHistory] = useState([])
+
+console.log(videoHistory);
+useEffect(()=>{
+  getAllHistory()
+},[])
+
+
+const  getAllHistory = async ()=>{
+try {
+  const result =await getHistoryAPI()
+  setVideoHistory(result.data)
+  
+} catch (error) {
+  console.log(error);
+}
+
+
+
+
+}
+
+
+
+
+
   return (
     <div className='container my-5'>
       <div className="d-flex justify-content-between">

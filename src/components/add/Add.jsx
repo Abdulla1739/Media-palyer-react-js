@@ -11,7 +11,7 @@ import { addVIdeoAPI } from '../../services/allAPI';
 
 
 
-function Add() {
+function Add({setaddVideoResponse}) {
   const [videoDetails, setvideoDetails] = useState({
     caption: "", imgURL:"", youtubeURL:"",
 })
@@ -28,6 +28,7 @@ if(caption&&imgURL&&youtubeURL){
    console.log(result);
     if( result.status >=200 && result.status<300){
       console.log(result.data);
+      setaddVideoResponse(result.data)
       toast.success( `${result.data.caption} is succesfully uploaded`)
       handleClose()
     }else{
