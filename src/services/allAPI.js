@@ -28,3 +28,20 @@ export const saveHistoryAPI = async (video)=>{ //only export  bcz in this functi
 export const getHistoryAPI = async ()=>{ //only export  bcz in this function multiple thing need to happen
     return await commonAPI("GET",`${SERVER_URL}/history`,"")
 }
+
+export const removeHistoryAPI  = async (videoId)=>{
+    return await commonAPI("DELETE",`${SERVER_URL}/history/${videoId}`,{})
+
+}
+export const addCategoryAPI  = async (categoryDetails)=>{
+    return await commonAPI("POST",`${SERVER_URL}/allcategories`,categoryDetails)
+
+}
+export const getCategoryAPI = async ()=>{ //only export  bcz in this function multiple thing need to happen
+    return await commonAPI("GET",`${SERVER_URL}/allcategories`,"")
+}
+
+export const removeCategoryAPI  = async (categoryId)=>{
+    return await commonAPI("DELETE",`${SERVER_URL}/allcategories/${categoryId}`,{})
+
+}

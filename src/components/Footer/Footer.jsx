@@ -64,7 +64,7 @@ function Footer() {
               className="form-control"
             />
             <button className="btn btn-info ms-2">
-              <i class="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right"></i>
             </button>
           </div>
           <div className="icons d-flex justify-content-between mt-3">
@@ -73,42 +73,42 @@ function Footer() {
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </a>
             <a
               href=""
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-brands fa-facebook"></i>
+              <i className="fa-brands fa-facebook"></i>
             </a>
             <a
               href=""
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-brands fa-instagram"></i>
+              <i className="fa-brands fa-instagram"></i>
             </a>
             <a
               href=""
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
             <a
               href=""
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
             </a>
             <a
               href=""
               style={{ textDecoration: "none", color: "white" }}
               target="_blank"
             >
-              <i class="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone"></i>
             </a>
           </div>
         </div>

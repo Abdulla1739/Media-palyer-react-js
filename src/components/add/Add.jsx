@@ -30,6 +30,7 @@ if(caption&&imgURL&&youtubeURL){
       console.log(result.data);
       setaddVideoResponse(result.data)
       toast.success( `${result.data.caption} is succesfully uploaded`)
+      setvideoDetails("")
       handleClose()
     }else{
       toast.error(`${result.response.data}`)

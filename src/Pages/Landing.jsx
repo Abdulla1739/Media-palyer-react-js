@@ -107,7 +107,7 @@ function Landing() {
 
         </div>
         <div className="col-lg-6">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/WWr9086eWtY?si=dGJqhJfVJu_jCwSi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/WWr9086eWtY?si=dGJqhJfVJu_jCwSi" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
 
 
 

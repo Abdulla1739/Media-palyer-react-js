@@ -66,7 +66,8 @@ function VideoCard({displayData,setDeleteResponse}) {
         <Modal.Body>
   
         <iframe width="100%" height="500" src={`${displayData?.youtubeURL}?autoplay=1`} title="caption"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
+        
+        
 
 
 

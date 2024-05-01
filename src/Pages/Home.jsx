@@ -15,7 +15,7 @@ function Home() {
     <>
     <div className="container my-5 d-flex justify-content-between">
       <Add setaddVideoResponse = {setaddVideoResponse}/>
-      <Link to={'/history'} Watch History></Link>
+      <Link to={'/history'} >Watch History</Link>
     </div>
     <div className="container-fluid my-5 row">
     <div className="col-lg-6">
