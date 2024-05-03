@@ -45,3 +45,14 @@ export const removeCategoryAPI  = async (categoryId)=>{
     return await commonAPI("DELETE",`${SERVER_URL}/allcategories/${categoryId}`,{})
 
 }
+
+// to get a video detail to store in category component
+export const getaVIdeoAPI = async (videoId)=>{ 
+    return await commonAPI("GET",`${SERVER_URL}/allVideos/${videoId}`,"")
+}
+
+
+// to update a category detail to store in category component
+export const updateCategoryDetailsAPI = async (categoryId,categoryDetails )=>{ 
+    return await commonAPI("PUT",`${SERVER_URL}/allcategories/${categoryId}`,categoryDetails)
+}
