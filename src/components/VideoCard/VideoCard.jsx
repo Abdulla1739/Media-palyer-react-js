@@ -6,7 +6,7 @@ import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 import { removeVideoAPI, saveHistoryAPI } from "../../services/allAPI";
 
-function VideoCard({ displayData, setDeleteResponse }) {
+function VideoCard({ displayData, setDeleteResponse,insideCategory }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -33,20 +33,19 @@ function VideoCard({ displayData, setDeleteResponse }) {
     } catch (error) {
       console.log(error);
     }
-
-
-    
   };
 
-
-  const dragstarted =(e,videoId)=>{
+  const dragstarted = (e, videoId) => {
     console.log(`Dragging started video id:${videoId}`);
-    e.dataTransfer.setData("videoId",videoId)
-  }
+    e.dataTransfer.setData("videoId", videoId);
+  };
 
   return (
     <div>
-      <Card draggable={true} onDragStart={e=>dragstarted(e,displayData?.id)}>
+      <Card
+        draggable={true}
+        onDragStart={(e) => dragstarted(e, displayData?.id)}
+      >
         <Card.Img
           onClick={handleShow}
           style={{ height: "200px", cursor: "pointer" }}
@@ -56,12 +55,13 @@ function VideoCard({ displayData, setDeleteResponse }) {
         <Card.Body className="text-center w-100">
           <Card.Title className="d-flex justify-content-between align-items-center">
             <p>{displayData?.caption}</p>
-            <button
+            {!insideCategory&&
+              <button
               onClick={() => handleRemoveVideo(displayData?.id)}
               className="btn"
             >
               <i className="fa-solid fa-trash text-danger"></i>
-            </button>
+            </button>}
           </Card.Title>
         </Card.Body>
       </Card>

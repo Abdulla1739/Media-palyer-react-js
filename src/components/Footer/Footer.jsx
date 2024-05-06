@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div  className="container mt-5 w-100">
+    <div className="container mt-5 w-100">
       <div className="d-lg-flex justify-content-between">
         <div style={{ width: "400px" }} className="intro ">
           <h5 className="py-2">
