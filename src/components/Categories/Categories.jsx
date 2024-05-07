@@ -17,7 +17,7 @@ import "react-toastify/dist/ReactToastify.css";
 import VideoCard from "../VideoCard/VideoCard";
 import { Row, Col } from "react-bootstrap";
 
-function Categories({ setremoveCategoryVideo }) {
+function Categories({ setremoveCategoryVideo,deleteVideoResponse }) {
   const [allCategoryName, setallCategoryName] = useState([]);
   const [categoryName, setCategoryName] = useState("");
   const [show, setShow] = useState(false);
@@ -26,7 +26,7 @@ function Categories({ setremoveCategoryVideo }) {
   const handleShow = () => setShow(true);
   useEffect(() => {
     getAllCategory();
-  }, []);
+  }, [deleteVideoResponse]);
 
   console.log(allCategoryName);
 

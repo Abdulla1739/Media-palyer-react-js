@@ -67,9 +67,11 @@ function History() {
               </tr>
             ))
           ) : (
-            <div className="text-danger fw-bolder">
-              Your Watch History is empty
-            </div>
+            <tr>
+              <td colSpan="5" className="text-danger fw-bolder">
+                Your Watch History is empty
+              </td>
+            </tr>
           )}
         </tbody>
       </table>

@@ -7,28 +7,27 @@ import Categories from "../components/Categories/Categories";
 function Home() {
   const [addVideoResponse, setaddVideoResponse] = useState("");
   const [removeCategoryVideo, setremoveCategoryVideo] = useState("");
-  const [removeAddVideoResponse, setremoveAddVideoResponse] = useState("");
+  const [deleteVideoResponse, setDeleteVideoResponse] = useState("");
 
   return (
     <>
       <div className="container my-5 d-flex justify-content-between">
         <Add
           setaddVideoResponse={setaddVideoResponse}
-          setremoveAddVideoResponse={setremoveAddVideoResponse}
         />
         <Link to={"/history"}>Watch History</Link>
       </div>
       <div className="container-fluid my-5 row">
         <div className="col-lg-6">
-          <h3>All videos</h3>
+          <h3>Uncategorised videos</h3>
           <ViewSection
             addVideoResponse={addVideoResponse}
             removeCategoryVideo={removeCategoryVideo}
-            setremoveAddVideoResponse={setremoveAddVideoResponse}
+            setDeleteVideoResponse={setDeleteVideoResponse}
           />
         </div>
         <div className="col-lg-6">
-          <Categories setremoveCategoryVideo={setremoveCategoryVideo} />
+          <Categories setremoveCategoryVideo={setremoveCategoryVideo} deleteVideoResponse ={deleteVideoResponse} />
         </div>
       </div>
     </>
